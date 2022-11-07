@@ -24,22 +24,20 @@ public class StarWars {
                 "computador tiene problemas para calcular parte de las coordenadas de salto. \n" +
                 "Chewbacca, piloto experto, se da cuenta que falta el cuerto número de la serie. \n" +
                 "Recuerda de sus tiempos en la academia de pilotos que para calcularlo hay que \n" +
-                "calcular el sumatorio entre nºdel sistema y el nºdel sector (ambos incluisve).\n" +
+                "calcular el sumatorio entre nºdel sistema y el nºdel sector (ambos inclusive).\n" +
                 "¿Qué debe introducir?");
 
-        S1 = (int) (Math.random() * (10 + 1));
-        System.out.println(S1);
+        S1 = (int) (1 + Math.random() * (10 + 1));
+        System.out.println("Nº del sistema " + S1);
         S2 = (int) (20 + Math.random() * (30 - 20 + 1));
-        System.out.println(S2);
-
-        total = S1 - S2;
+        System.out.println("Nº del sector " + S2);
 
         if (S1 < S2) {
             for (int i = S1; i <= S2; i++) {
-
-                System.out.print(i + " ");
+                total += i;
+                System.out.print("+" + i );
             }
-
+            System.out.println(" = " + total);
         }
 
         sc.close();
