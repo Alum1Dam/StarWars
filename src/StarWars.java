@@ -1,3 +1,8 @@
+/*
+* Desarrollar un pequeño videojuego educativo
+* para adolescentes llamado 'Star Wars Códigos Secretos'
+*/
+
 import java.util.Scanner;
 
 public class StarWars {
