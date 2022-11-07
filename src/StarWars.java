@@ -10,22 +10,22 @@ public class StarWars {
 
         Scanner sc = new Scanner(System.in);
         // Inicio del Programa
-        /*System.out.println("=== STAR WARS CÓDIGO SECRETOS ===");
+        System.out.println("=== STAR WARS CÓDIGO SECRETOS ===");
         System.out.println("Hace mucho tiempo, en una galaxia muy, muy lejana... La Princesa Leia, Luke \n" +
                 "Skywalker, Han Solo, Chewbacca, C3PO y R2D2 viajan en una nave imperial robada \n" +
                 "en una misión secreta para infiltrarse en otra estrella de la muerte que el imperio \n" +
                 "está construyendo para destruirla. (Presiona Intro para continuar)");
-        String intro = sc .nextLine();*/
+        String intro = sc .nextLine();
 
         //Declaración de variables
         //Nivel1
         int S1, S2, totalN1 = 0, sumatorioN1 = 0;
         //Nivel 2
-        int P1, P2, totalN2 = 0, productorioN2 = 0;
+        int P1, P2, totalN2 = 1, productorioN2 = 0;
 
         do {
             // Nivel 1
-            /*System.out.println("Los problemas empiezan cuando deben realizar un salto hiperespacial hasta al \n" +
+            System.out.println("Los problemas empiezan cuando deben realizar un salto hiperespacial hasta al \n" +
                     "sistema S1 en el sector S2, pero el sistema de navegación está estropeado y el \n" +
                     "computador tiene problemas para calcular parte de las coordenadas de salto. \n" +
                     "Chewbacca, piloto experto, se da cuenta que falta el cuerto número de la serie. \n" +
@@ -55,9 +55,11 @@ public class StarWars {
                 } else {
                     System.out.println("Has fallado la misión ಥ_ಥ ");
                     totalN1 = 0;
+                    break;
+
                 }
             }
-*/
+
             System.out.println("-------------------------");
             System.out.println("-------------------------");
 
@@ -74,14 +76,13 @@ public class StarWars {
                     "entre el nº del agente y el nº de la nave (ambos inclusive).\n" +
                     "¿Cuál es el código?");
 
-            P1 = (int) (1 + Math.random() * (7 + 1));
+            P1 = (int) (1 + Math.random() * (7));
             System.out.println("\nNº del agente " + P1);
             P2 = (int) (8 + Math.random() * (12 - 8 + 1));
-            System.out.println("Nº de la nave \n" + P2);
+            System.out.println("Nº de la nave " + P2 + "\n");
 
             if (P1 < P2) {
-                for (int i = P1; i < P2; i++) {
-
+                for (int i = P1; i <= P2; i++) {
                     totalN2 *= i;
                     System.out.print("*" + i);
                 }
@@ -93,12 +94,11 @@ public class StarWars {
                     System.out.println(totalN2);
                 } else {
                     System.out.println("Has fallado la misión ಥ_ಥ ");
-                    totalN1 = 0;
+                    totalN2 = 0;
+                    break;
                 }
             }
-
-
-        } while (totalN1 != 0);
+        } while (totalN1 != 0 || totalN2 != 0);
 
         System.out.println("Gracias por jugar :D");
 
