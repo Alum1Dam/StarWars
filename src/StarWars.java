@@ -15,18 +15,32 @@ public class StarWars {
                 "Skywalker, Han Solo, Chewbacca, C3PO y R2D2 viajan en una nave imperial robada \n" +
                 "en una misión secreta para infiltrarse en otra estrella de la muerte que el imperio \n" +
                 "está construyendo para destruirla. (Presiona Intro para continuar)");
-        sc.next();
-        //Haz
-        do {
+        String intro = sc .nextLine();
 
-            int S1 = (int) (Math.random() * (1 + 10));
-            int S2 = (int) (Math.random() * (20 + 30));
+        int S1, S2, total = 0;
 
-            for () {
+        System.out.println("Los problemas empiezan cuando deben realizar un salto hiperespacial hasta al \n" +
+                "sistema S1 en el sector S2, pero el sistema de navegación está estropeado y el \n" +
+                "computador tiene problemas para calcular parte de las coordenadas de salto. \n" +
+                "Chewbacca, piloto experto, se da cuenta que falta el cuerto número de la serie. \n" +
+                "Recuerda de sus tiempos en la academia de pilotos que para calcularlo hay que \n" +
+                "calcular el sumatorio entre nºdel sistema y el nºdel sector (ambos incluisve).\n" +
+                "¿Qué debe introducir?");
 
+        S1 = (int) (Math.random() * (10 + 1));
+        System.out.println(S1);
+        S2 = (int) (20 + Math.random() * (30 - 20 + 1));
+        System.out.println(S2);
+
+        total = S1 - S2;
+
+        if (S1 < S2) {
+            for (int i = S1; i <= S2; i++) {
+
+                System.out.print(i + " ");
             }
 
-        }/*Mientras*/ while ();
+        }
 
         sc.close();
     }
