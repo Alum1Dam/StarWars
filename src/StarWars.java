@@ -22,9 +22,13 @@ public class StarWars {
         int S1, S2, totalN1 = 0, sumatorioN1 = 0;
         //Nivel 2
         int P1, P2, totalN2 = 1, productorioN2 = 0;
+        // Nivel 3
+        int totalN3 = 0,factorialN3 = 1, contadorDelContador = 0;
+        int N = 0;
+        int[] contador;
 
         do {
-            // Nivel 1
+            /*// Nivel 1
             System.out.println("Los problemas empiezan cuando deben realizar un salto hiperespacial hasta al \n" +
                     "sistema S1 en el sector S2, pero el sistema de navegación está estropeado y el \n" +
                     "computador tiene problemas para calcular parte de las coordenadas de salto. \n" +
@@ -98,7 +102,39 @@ public class StarWars {
                     break;
                 }
             }
-        } while (totalN1 != 0 || totalN2 != 0);
+
+            System.out.println("-------------------------");
+            System.out.println("-------------------------");
+*/
+            // Nivel 3
+            System.out.println("Han Solo proporciona el código correcto. Atracan en la estrella de la muerte, se\n" +
+                    "equipan con trajes de soldados imperiales que encuentran en la nave para pasar\n" +
+                    "desapercibidos y bajan. Ahora deben averiguar en qué nivel de los N existentes se\n" +
+                    "encuentra el reactor principal. Se dirigen al primer panel computerizado que\n" +
+                    "encuentran y la Princesa Leia intenta acceder a los planos de la nave pero necesita\n" +
+                    "introducir una clave de acceso. Entonces recuerda la información que le proporcionó\n" +
+                    "Lando Calrissian “La clave de acceso a los planos de la nave es el factorial de N/10\n" +
+                    "(redondeando N hacia abajo), donde N es el nº de niveles”.\n" +
+                    "¿Cual es el nivel correcto?");
+
+            N = (int) (50 + (Math.random() * 100));
+            contador = new int[10];
+
+            System.out.print((N/10) + "! =");
+            if () {
+                for (int i = 0; i < N; i--) {
+                    factorialN3 = N * i;
+                    factorialN3++;
+                    System.out.println("* " + i);
+                }
+            } else {
+                System.out.println("Has fallado la misión ಥ_ಥ ");
+                totalN3 = 0;
+                break;
+            }
+
+
+        } while (totalN1 != 0 || totalN2 != 0 || totalN3 != 0);
 
         System.out.println("Gracias por jugar :D");
 
